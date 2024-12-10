@@ -73,7 +73,7 @@ col1, col2 = st.columns(2)
 
 # Display the highlighted texts
 with col1:
-    st.subheader("Artikel oud")
+    st.subheader(f"Artikel {current_row['huidig_artikel_naam']} oud")
     st.markdown(f"<p style='font-size: 18px;'>{highlighted_text_left}</p>", unsafe_allow_html=True)
 
 with col2:
