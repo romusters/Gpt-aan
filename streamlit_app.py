@@ -55,7 +55,7 @@ def highlight_differences(text1, text2):
 if "row_index" not in st.session_state:
     st.session_state.row_index = 1
 
-st.title("Zie het verschil tussen een oud en nieuw artikel")
+st.title("Zie het verschil tussen een oud en nieuw artikel (ter illustratie met irrelevant wetsartikelen)")
 
 # st.subheader("<span style='color: red;'>Blauw</span> betekent dat een stuk tekst is vervangen door een ander stuk tekst. Groen betekent dat een stuk tekst is toegevoegd. Rood betekent dat een stuk tekst is verwijderd.")
 
@@ -73,11 +73,11 @@ col1, col2 = st.columns(2)
 
 # Display the highlighted texts
 with col1:
-    st.subheader(f"Artikel {current_row['huidig_artikel_naam']} oud")
+    st.subheader(f"{current_row['huidig_artikel_naam']} oud")
     st.markdown(f"<p style='font-size: 18px;'>{highlighted_text_left}</p>", unsafe_allow_html=True)
 
 with col2:
-    st.subheader("Artikel nieuw")
+    st.subheader(f"{current_row['nieuw_artikel_naam']} nieuw")
     st.markdown(f"<p style='font-size: 18px;'>{highlighted_text_right}</p>", unsafe_allow_html=True)
 
 # Button to move to the next row
